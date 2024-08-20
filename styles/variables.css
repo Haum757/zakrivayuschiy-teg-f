@@ -1,8 +1,8 @@
 :root {
   --main-font: "Inter-Variable";
   --accent-font: "Press Start 2P";
-  --title-font-weight: 'wght' 700;
-  --paragraph-font-weight: 'wght' 400;
+  --title-font-weight: 700;
+  --paragraph-font-weight: 400;
   --bg-color: #fff;
   --accent-color: #000;
   --gradient-color-first: #d3d3d3;
