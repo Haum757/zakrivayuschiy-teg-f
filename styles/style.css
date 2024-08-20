@@ -1,19 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
 .page {
   color: var(--accent-color);
   font-family: var(--main-font);
@@ -35,7 +19,7 @@
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-block-end: 21px;
   font-family: var(--accent-font), sans-serif;
-  width:var(--card-width) ;
+  width: var(--card-width);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,8 +54,9 @@
   border: 1px solid transparent;
   cursor: pointer;
 }
+
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
   width: 0%;
   height: 2px;
@@ -84,33 +69,32 @@
   width: 100%;
 }
 
-.theme-menu__button:disabled:before{
+.theme-menu__button:disabled:before {
   position: absolute;
-  content: '▶';
+  content: "▶";
   inset-inline-start: -13px;
   animation: arrow 0.5s ease-in-out infinite;
-  
 }
 
 .theme-menu__button:focus-visible {
-  opacity: .6;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
-  outline: none
+  outline: none;
 }
 
 .theme-menu__button:disabled {
-  opacity: .6;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
+
 .theme-menu__button:hover {
-  opacity: .6;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
 .align-item {
   margin-inline-start: 4px;
-
 }
 
 .align-item-left {
@@ -125,13 +109,13 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-block-start: 50px;
-  width:var(--card-width) ;
+  width: var(--card-width);
   border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
 }
 
 .section:first-child {
-  margin-block-start:99px ;
+  margin-block-start: 99px;
 }
 
 .card-button {
@@ -143,7 +127,7 @@
   border: 2px solid currentColor;
 }
 
-.button{
+.button {
   position: relative;
   overflow: hidden;
 }
@@ -156,24 +140,26 @@
 
 .button::before {
   position: absolute;
-  content: '';
-  background-color:var(--accent-color);
+  content: "";
+  background-color: var(--accent-color);
   width: 100%;
-   height: 100%;
-    top: 0;
-   left: 0;
-   transform: translateX(-100%);
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
 }
 
 .button:hover::before {
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
-.button__text{
+
+.button__text {
   position: relative;
   color: var(--button-text-color);
   mix-blend-mode: difference;
 }
+
 .section-heading {
   margin-inline-start: 10px;
   line-height: 31px;
@@ -184,7 +170,6 @@
     max-height: 50px;
     word-spacing: 0.03em;
     line-height: 26px;
-    
   }
 }
 
@@ -210,7 +195,8 @@
   flex-direction: column;
   gap: 25px;
 }
-.img{
+
+.img {
   width: 100%;
   @media (max-width: 375px) {
     aspect-ratio: 1 / 1.02;
@@ -237,7 +223,6 @@
 
 .experience-img {
   filter: hue-rotate(90deg) blur(3px) contrast(0.6);
-  
 }
 
 .image-box-experience {
@@ -260,22 +245,26 @@
   text-shadow: 0 0 2px var(--bg-color);
 }
 
-
-@supports(text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px 1px var(--bg-color)) {
+@supports (text-stroke: 1px var(--bg-color)) or
+  (-webkit-text-stroke: 1px 1px var(--bg-color)) {
   .watermark {
     -webkit-text-stroke: 0.5px var(--bg-color);
     text-shadow: none;
     opacity: 0.4;
   }
-} 
+}
+
+.text-transform {
+  text-transform: lowercase;
+}
 
 .like-buttons {
   display: flex;
   justify-self: flex-end;
   align-self: center;
   cursor: pointer;
-
 }
+
 .card__icon-button {
   padding: 8px 5px 0 0;
   border: 2px solid transparent;
@@ -327,83 +316,8 @@
   }
 }
 
-
-.like-icon:hover {
-  .core {
-    fill: var(--accent-color);
-    transition: fill 0.3s;
-  }
-  .main-body {
-    fill: var(--accent-color);
-    transition: fill 0.3s 0.05s;
-  }
-}
-
-.like-icon:not(:hover) {
-  .core {
-    fill: none;
-    transition: fill 0.3s 0.03s;
-  }
-  .main-body {
-    fill: none;
-    transition: fill 0.3s;
-  }
-}
-
-.text-transform {
-  text-transform: lowercase;
-}
-
-.like-icon:active {
-  .core {
-    fill: var(--sparks-color);
-    transition: fill 0.3s;
-  }
-  .main-body {
-    fill: var(--sparks-color);
-    transition: fill 0.3s 0.05s;
-  }
-}
-
-.like-icon.is-liked {
-  animation-name: scaling;
-  animation-duration: 0.3s;
-  animation-delay: 0.1s;
-  animation-timing-function: ease-in;
-  .core {
-    fill: var(--sparks-color);
-    transition: fill 0.3s;
-  }
-  .main-body {
-    fill: var(--sparks-color);
-    transition: fill 0.3s 0.05s;
-  }
-  .contour {
-    fill: var(--sparks-color);
-    transition: fill 0.3s 0.06s;
-  }
-
-}
-
-.like-icon:not(.is-liked) {
-  .contour {
-    fill: var(--accent-color);
-    transition: fill 0.1s;
-  }
-}
-
-.like-icon.is-liked{
-  .sparks {
-  animation: sparkling 0.3s ease-in 0.3s;}
-}
-
-.sparks {
-  opacity: 0;
-}
-
 .modal {
   padding: 0;
-  
   font-family: var(--accent-font);
   font-size: 9.9px;
   color: var(--accent-color);
@@ -412,8 +326,6 @@
   width: 356px;
   height: 194px;
   @media (max-width: 375px) {
-   
-    
   }
 }
 
@@ -461,11 +373,10 @@
 
 .perfectionism {
   filter: hue-rotate(30deg);
-
 }
 
 .not-alone-img {
-filter: invert(0.8);
+  filter: invert(0.8);
 }
 
 .strategy-img {
@@ -481,34 +392,4 @@ filter: invert(0.8);
     top: 25px;
     right: 11px;
   }
- }
-
- @keyframes arrow {
-  from {
-    inset-inline-start: -13px;
-  }
-  
-  to {
-    inset-inline-start: -9px;
-  }
- }
-
- @keyframes scaling {
-  0% {
-    transform: scale(1.0);
-  }
-  
-  100% {
-    transform: scale(1.5);
-  }
-  }
-
-  @keyframes sparkling {
-    0% {
-      opacity: 0;
-    }
-    
-    100% {
-      opacity: 1;
-    }
-    }
+}
