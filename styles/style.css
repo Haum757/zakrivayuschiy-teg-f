@@ -116,7 +116,7 @@
 }
 
 .card-button {
-  padding: 10px 35px;
+  min-width: 130px;
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   background-color: var(--bg-color);
@@ -349,6 +349,8 @@
 }
 
 .closeModal {
+  background-color: var(--bg-color);
+  border: 2px solid currentColor;
   text-transform: uppercase;
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
@@ -357,8 +359,7 @@
   align-items: center;
   padding: 10px 130px;
   align-self: center;
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
+  cursor: pointer;
 }
 
 .img {
